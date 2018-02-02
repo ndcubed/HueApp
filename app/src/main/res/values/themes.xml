@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="MainTheme" parent="android:Theme.Holo.Light.NoActionBar">
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@color/appColor</item>
+        <item name="colorDividerColor">#00000000</item>
+        <item name="android:spinnerDropDownItemStyle">@style/SpinnerItem.DropDownItem</item>
+        <item name="android:editTextBackground">@drawable/underline</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+        <item name="android:fitsSystemWindows">true</item>
+
+        <item name="tabBarColor">#323232</item>
+        <item name="appForegroundColor">#373737</item>
+        <item name="actionBarColor">#323232</item>
+    </style>
+
+    <style name="WhiteDialogTheme" parent="android:Theme.Holo.Light.NoActionBar">
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="tabBarColor">#ef6c00</item>
+        <item name="actionBarColor">#c45900</item>
+        <item name="android:spinnerDropDownItemStyle">@style/SpinnerItem.DropDownItem</item>
+        <item name="android:editTextBackground">@drawable/underline</item>
+    </style>
+
+    <style name="SpinnerItem.DropDownItem" parent="android:Widget.Holo.Light.DropDownItem.Spinner">
+        <item name="android:textColor">#ff707070</item>
+    </style>
+
+    <style name="HoloEditTextStyle" parent="android:Widget.Holo.Light.EditText">
+        <item name="android:editTextBackground">@android:drawable/edit_text</item>
+    </style>
+</resources>

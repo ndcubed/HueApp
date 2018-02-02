@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:ndcubed="http://schemas.android.com/apk/res-auto"
+              android:background="#96000000"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+            android:gravity="center"
+            android:padding="10dp">
+
+    <ScrollView android:layout_width="match_parent" android:layout_height="wrap_content">
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/half_rounded_card_layer"
+                android:paddingBottom="0dp">
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="95dp"
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginTop="15dp"
+                    android:paddingRight="6dp"
+                    android:paddingBottom="1dp"
+                    android:text="Add Scene"
+                    android:textSize="11dp"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:background="@drawable/blue_arrow"
+                    android:textColor="#ffffff"/>
+
+                <com.ndcubed.nappsupport.views.RobotoTextView.TextViewThin
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:gravity="center"
+                    android:layout_marginBottom="10dp"
+                    android:text="Name Your Scene"
+                    android:textSize="30sp"
+                    android:id="@+id/titleLabel"
+                    android:textColor="#ff282828"/>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_marginBottom="60dp"
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/sceneNameControls"
+                    android:visibility="visible">
+
+                    <EditText android:layout_width="200dp" android:layout_height="30dp" android:gravity="center"
+                        android:textColor="#282828"
+                        android:textSize="18dp"
+                        android:background="@drawable/edit_text_underline"
+                        android:id="@+id/sceneNameField"
+                        android:maxLines="1"
+                        android:inputType="textCapWords"
+                        android:imeOptions="actionDone"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:id="@+id/groupControls"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:layout_marginBottom="40dp"
+                        android:layout_marginTop="25dp"
+                        android:paddingLeft="40dp"
+                        android:paddingRight="40dp">
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/blue_card_layer"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:gravity="center">
+
+                            <Spinner
+                                android:layout_width="match_parent"
+                                android:layout_height="55dp"
+                                android:paddingLeft="10dp"
+                                android:gravity="center"
+                                android:popupBackground="@drawable/card_layer"
+                                android:background="@drawable/spinner_gray_background"
+                                android:id="@+id/groupSpinner"/>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <TextView
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginBottom="40dp"
+                        android:text="The group of lights this scene will effect. Lights outside this group won't be effected."
+                        android:textSize="13dp"
+                        android:textColor="#8c8c8c"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:visibility="visible"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <com.ndcubed.nappsupport.views.SimpleColorButton
+                android:id="@+id/nextButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                ndcubed:buttonColor="#405269"
+                ndcubed:isHalfRoundedStyle="true"
+                ndcubed:isAnimated="false"
+                android:text="Next"
+                android:padding="20dp"
+                />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

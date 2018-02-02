@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:ndcubed="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:paddingBottom="12dp"
+              android:clipToPadding="false">
+
+<LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical">
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="60dp" android:background="@drawable/basic_button_drawable"
+                  android:gravity="center"
+                  android:clickable="true">
+        <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_marginRight="20dp"
+                android:text="Start"
+                android:textSize="11dp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:textColor="#ffffff"/>
+
+        <View android:layout_width="20dp" android:layout_height="20dp" android:background="@drawable/play_button"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="18dp"
+            android:orientation="vertical"
+            android:background="@drawable/card_layer">
+
+        <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="95dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="18dp"
+                android:paddingRight="6dp"
+                android:paddingBottom="1dp"
+                android:text="Presets"
+                android:textSize="11dp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:background="@drawable/blue_arrow"
+                android:textColor="#ffffff"/>
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:gravity="center">
+            <Spinner android:layout_width="match_parent" android:layout_height="50dp"
+                     android:layout_marginLeft="10dp"
+                     android:layout_marginRight="10dp"
+                     android:layout_marginTop="5dp"
+                     android:layout_marginBottom="10dp"
+                     android:id="@+id/presetsSpinner"/>
+
+            <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="Smoothly displays colors from one light to the next. Pick the lights below in the order you want them to transition."
+                    android:paddingRight="15dp"
+                    android:paddingLeft="15dp"
+                    android:textSize="11dp"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:textColor="#ff323232"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="15dp"
+            android:orientation="vertical"
+            android:background="@drawable/card_layer">
+
+        <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="95dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="15dp"
+                android:paddingRight="6dp"
+                android:paddingBottom="1dp"
+                android:text="Lights"
+                android:textSize="11dp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:background="@drawable/blue_arrow"
+                android:textColor="#ffffff"/>
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp">
+            <com.ndcubed.nappsupport.views.SimpleColorButton
+                    android:layout_width="130dp"
+                    android:layout_height="50dp"
+                    android:text="Pick Lights"
+                    android:textSize="11dp"
+                    android:textAllCaps="false"
+                    ndcubed:buttonColor="@color/appLightColor"
+                    android:textStyle="bold"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="15dp"
+            android:orientation="vertical"
+            android:background="@drawable/card_layer">
+
+        <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="95dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="15dp"
+                android:paddingRight="6dp"
+                android:paddingBottom="1dp"
+                android:text="Colors"
+                android:textSize="11dp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:background="@drawable/blue_arrow"
+                android:textColor="#ffffff"/>
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center"
+                      android:layout_marginTop="10dp"
+                      android:layout_marginBottom="5dp">
+            <View android:layout_width="40dp" android:layout_height="40dp" android:background="@drawable/add_button_drawable"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="20dp"
+            android:orientation="vertical"
+            android:background="@drawable/card_layer">
+
+        <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="95dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="18dp"
+                android:paddingRight="6dp"
+                android:paddingBottom="1dp"
+                android:text="Transition"
+                android:textSize="11dp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:background="@drawable/blue_arrow"
+                android:textColor="#ffffff"/>
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center" android:orientation="vertical">
+            <SeekBar
+                    android:id="@+id/brightnessBar"
+                    android:max="254"
+                    android:progress="254"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="15dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="5 Seconds"
+                    android:textSize="11dp"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:textColor="#ff323232"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="115dp"
+            android:paddingBottom="15dp"
+            android:orientation="vertical"
+            android:background="@drawable/card_layer">
+
+        <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="95dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="15dp"
+                android:paddingRight="6dp"
+                android:paddingBottom="1dp"
+                android:text="Brightness"
+                android:textSize="11dp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:background="@drawable/blue_arrow"
+                android:textColor="#ffffff"/>
+    </LinearLayout>
+</LinearLayout>
+
+
+</ScrollView>

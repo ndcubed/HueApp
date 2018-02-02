@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="70dp"
+        android:orientation="horizontal"
+        android:background="?attr/appForegroundColor"
+        android:gravity="center">
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="95dp"
+            android:text="Location"
+            android:textSize="11dp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textColor="#ffffff"/>
+
+        <com.ndcubed.nappsupport.views.RoundedSwitch android:layout_width="70dp" android:layout_height="30dp"
+            android:id="@+id/locationSwitch"/>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="10dp">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_marginBottom="8dp">
+                        <TextView
+                            android:layout_height="27dp"
+                            android:layout_width="190dp"
+                            android:paddingRight="20dp"
+                            android:paddingBottom="1dp"
+                            android:paddingLeft="20dp"
+                            android:text="When I Get Home Turn On"
+                            android:textSize="12dp"
+                            android:textStyle="bold"
+                            android:gravity="center"
+                            android:background="@drawable/orange_header_arrow"
+                            android:textColor="#ffffff"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="125dp"
+                        android:gravity="center"
+                        android:background="@drawable/card_layer"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginBottom="0dp"
+                        android:padding="10dp">
+
+                        <RadioGroup
+                            android:id="@+id/radioButtonGroup"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/groupRadioButton"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Group"
+                                android:layout_marginRight="35dp"
+                                android:textColor="#787878"/>
+                            <RadioButton
+                                android:id="@+id/sceneRadioButton"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="#787878"
+                                android:text="Scene"/>
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp">
+                        <TextView
+                            android:id="@+id/groupSceneHeader"
+                            android:layout_height="27dp"
+                            android:layout_width="190dp"
+                            android:paddingRight="20dp"
+                            android:paddingBottom="1dp"
+                            android:paddingLeft="20dp"
+                            android:text="Select a Group"
+                            android:textSize="12dp"
+                            android:textStyle="bold"
+                            android:gravity="center"
+                            android:background="@drawable/orange_header_arrow"
+                            android:textColor="#ffffff"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="125dp"
+                        android:gravity="center"
+                        android:background="@drawable/card_layer"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginBottom="0dp"
+                        android:padding="10dp">
+
+                        <Spinner
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:gravity="center"
+                            android:paddingLeft="24dp"
+                            android:popupBackground="@drawable/card_layer"
+                            android:background="@drawable/spinner_dark_background"
+                            android:id="@+id/groupSpinner"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:id="@+id/groupControlsHeader">
+
+                        <TextView
+                            android:layout_height="27dp"
+                            android:layout_width="190dp"
+                            android:paddingRight="20dp"
+                            android:paddingBottom="1dp"
+                            android:paddingLeft="20dp"
+                            android:text="Set Brightness and Color"
+                            android:textSize="12dp"
+                            android:textStyle="bold"
+                            android:gravity="center"
+                            android:background="@drawable/orange_header_arrow"
+                            android:textColor="#ffffff"
+                            android:id="@+id/textView" />
+                    </LinearLayout>
+
+                    <include layout="@layout/light_control_layout"
+                        android:id="@+id/groupControlsLayout"/>
+
+                </LinearLayout>
+            </RelativeLayout>
+        </ScrollView>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:gravity="center"
+            android:visibility="gone"
+            android:id="@+id/disabledOverlay"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#f0ebebeb"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:clickable="true">
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="With location enabled Hues can turn on your lights to a specific scene or color when you arrive at home."
+                android:textSize="14dp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:textColor="#494949"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:layout_marginBottom="35dp"/>
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

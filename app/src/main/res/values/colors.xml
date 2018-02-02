@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="darkMenuOptionColor">#292c2f</color>
+    <color name="pollOptionPressBackgroundColor">#00b5ff</color>
+    <color name="pollOptionsColor">#ffebebeb</color>
+    <color name="pollUserColor">#ffeb0065</color>
+    <color name="pollUserPressColor">#ffab0053</color>
+    <color name="offWhiteColor">#ffdedede</color>
+    <color name="appOrangeColor">#ef6c00</color>
+    <color name="appDarkOrangeColor">#ffd96200</color>
+    <color name="appColor">#ff323232</color>
+    <color name="appLightColor">#ff0097ae</color>
+    <color name="appDarkColor">#ff008497</color>
+</resources>

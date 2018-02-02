@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:orientation="vertical"
+            android:clipToPadding="false"
+            android:clipChildren="false">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginBottom="8dp">
+                <TextView
+                    android:layout_height="27dp"
+                    android:layout_width="190dp"
+                    android:paddingRight="20dp"
+                    android:paddingBottom="1dp"
+                    android:paddingLeft="20dp"
+                    android:text="Choose a Button"
+                    android:textSize="12dp"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:background="@drawable/orange_header_arrow"
+                    android:textColor="#ffffff"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/card_layer"
+                android:orientation="horizontal"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:gravity="center">
+
+                <LinearLayout
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="8dp">
+                    <com.ndcubed.hueapp.FixedAspectHueTapButton
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        android:background="@drawable/hue_tap_button_one"
+                        android:id="@+id/hueButton1"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="8dp">
+                    <com.ndcubed.hueapp.FixedAspectHueTapButton
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        android:background="@drawable/hue_tap_button_two"
+                        android:id="@+id/hueButton2"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="8dp">
+                    <com.ndcubed.hueapp.FixedAspectHueTapButton
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        android:background="@drawable/hue_tap_button_three"
+                        android:id="@+id/hueButton3"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent">
+                    <com.ndcubed.hueapp.FixedAspectHueTapButton
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        android:background="@drawable/hue_tap_button_four"
+                        android:id="@+id/hueButton4"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp">
+                <TextView
+                    android:layout_height="27dp"
+                    android:layout_width="190dp"
+                    android:paddingRight="20dp"
+                    android:paddingBottom="1dp"
+                    android:paddingLeft="20dp"
+                    android:text="Group or Scene"
+                    android:textSize="12dp"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:background="@drawable/orange_header_arrow"
+                    android:textColor="#ffffff"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="125dp"
+                android:gravity="center"
+                android:background="@drawable/card_layer"
+                android:layout_marginTop="0dp"
+                android:layout_marginBottom="0dp"
+                android:padding="10dp">
+
+                <RadioGroup
+                    android:id="@+id/radioButtonGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/groupRadioButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Group"
+                        android:layout_marginRight="35dp"
+                        android:textColor="#787878"/>
+                    <RadioButton
+                        android:id="@+id/sceneRadioButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#787878"
+                        android:text="Scene"/>
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp">
+                <TextView
+                    android:id="@+id/groupSceneHeader"
+                    android:layout_height="27dp"
+                    android:layout_width="190dp"
+                    android:paddingRight="20dp"
+                    android:paddingBottom="1dp"
+                    android:paddingLeft="20dp"
+                    android:text="Select a Group"
+                    android:textSize="12dp"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:background="@drawable/orange_header_arrow"
+                    android:textColor="#ffffff"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="125dp"
+                android:gravity="center"
+                android:background="@drawable/card_layer"
+                android:layout_marginTop="0dp"
+                android:layout_marginBottom="0dp"
+                android:padding="10dp">
+
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:gravity="center"
+                    android:paddingLeft="24dp"
+                    android:popupBackground="@drawable/card_layer"
+                    android:background="@drawable/spinner_dark_background"
+                    android:id="@+id/groupSpinner"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:id="@+id/groupControlsHeader">
+
+                <TextView
+                    android:layout_height="27dp"
+                    android:layout_width="190dp"
+                    android:paddingRight="20dp"
+                    android:paddingBottom="1dp"
+                    android:paddingLeft="20dp"
+                    android:text="Set Brightness and Color"
+                    android:textSize="12dp"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:background="@drawable/orange_header_arrow"
+                    android:textColor="#ffffff"
+                    android:id="@+id/textView" />
+            </LinearLayout>
+
+            <include layout="@layout/light_control_layout"
+                android:id="@+id/groupControlsLayout"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

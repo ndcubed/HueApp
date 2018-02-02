@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="cardBackground" format="reference"/>
+    <attr name="dragHandleBackground" format="reference"/>
+    <attr name="dialogBackground" format="reference"/>
+    <attr name="dialogDividerColor" format="color"/>
+    <attr name="createMessageBackgroundColor" format="color"/>
+    <attr name="notificationButtonColor" format="color"/>
+    <attr name="cardBackgroundColor" format="color"/>
+    <attr name="cardTextColor" format="color"/>
+    <attr name="tabBarColor" format="color"/>
+    <attr name="windowColor" format="color"/>
+    <attr name="cardUserColor" format="color"/>
+    <attr name="colorDividerColor" format="color"/>
+    <attr name="fadeViewColor" format="color"/>
+    <attr name="pullBarColor" format="color"/>
+    <attr name="disabledButtonColor" format="color"/>
+    <attr name="likeButtonDrawable" format="reference"/>
+    <attr name="likeButtonColor" format="color"/>
+    <attr name="likeButtonTextColor" format="color"/>
+    <attr name="arrowColor" format="color"/>
+    <attr name="arrowDrawable" format="reference"/>
+    <attr name="arrowTextColor" format="color"/>
+    <attr name="commentCardDrawable" format="reference"/>
+    <attr name="commentBackground" format="reference"/>
+
+    <attr name="commentsWindowColor" format="color"/>
+    <attr name="transparentWindowColor" format="color"/>
+    <attr name="actionBarColor" format="color"/>
+    <attr name="dragViewColor" format="color"/>
+
+    <attr name="appBackgroundColor" format="color"/>
+    <attr name="appForegroundColor" format="color"/>
+</resources>

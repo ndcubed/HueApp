@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:ndcubed="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:background="?attr/appForegroundColor"
+              android:gravity="center"
+        >
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="45dp"
+            android:gravity="top|center">
+
+        <View android:layout_width="156dp" android:layout_height="280dp" android:background="@drawable/bulb_icon"
+              android:layout_marginBottom="30dp"
+              android:id="@+id/bulbIcon"/>
+
+        <com.ndcubed.nappsupport.views.RobotoTextView.TextViewThin
+                android:id="@+id/introLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Lets Get Started"
+                android:textSize="25dp"
+                android:textColor="#ffffff"/>
+    </LinearLayout>
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="0dp"
+                  android:gravity="center"
+                  android:paddingBottom="8dp"
+                  android:orientation="vertical"
+            android:layout_weight="1">
+
+        <com.ndcubed.nappsupport.views.SimpleColorButton
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                ndcubed:isRoundedStyle="false"
+                ndcubed:buttonColor="?attr/actionBarColor"
+                android:text="Find Your Bridge"
+                android:id="@+id/connectButton"
+                android:visibility="visible"
+                />
+
+        <LinearLayout
+                android:background="?attr/actionBarColor"
+                android:visibility="gone"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:id="@+id/loadingContainer"
+                android:layout_height="65dp">
+            <View
+                    android:layout_height="40dp"
+                    android:layout_width="40dp"
+                    android:background="@drawable/white_loading_wheel"
+                    android:id="@+id/loadingWheel"/>
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:gravity="center"
+                      android:visibility="gone">
+
+            <View
+                    android:layout_height="50dp"
+                    android:layout_width="50dp"
+                    android:background="@drawable/white_loading_wheel"
+                    android:layout_marginRight="15dp"/>
+
+            <com.ndcubed.nappsupport.views.RobotoTextView.TextViewLight
+                    android:id="@+id/searchLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Connecting"
+                    android:textSize="18dp"
+                    android:textColor="#ffffff"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
+

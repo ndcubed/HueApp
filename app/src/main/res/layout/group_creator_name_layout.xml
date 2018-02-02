@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="#ff009c91">
+
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="80dp"
+            android:text="Name Your Group"
+            android:textSize="30dp"
+            android:textColor="#ffffff"
+            android:gravity="center"
+            android:visibility="visible"/>
+
+
+<RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginBottom="100dp">
+    <EditText android:layout_width="200dp" android:layout_height="30dp" android:gravity="center"
+            android:textColor="#ffffff"
+            android:textSize="18dp"
+            android:background="@drawable/edit_text_underline"
+            android:id="@+id/groupNameField"
+            android:layout_centerInParent="true"
+            android:textCursorDrawable="@drawable/white_text_cursor"
+            android:maxLines="1"
+            android:inputType="textCapWords"
+            android:imeOptions="actionDone"/>
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="30dp"
+            android:text="The name of your group."
+            android:textSize="13dp"
+            android:textColor="#ffffff"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:visibility="visible"/>
+</RelativeLayout>
+
+</LinearLayout>

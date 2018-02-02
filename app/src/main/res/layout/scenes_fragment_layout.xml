@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:ndcubed="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:clipToPadding="false"
+              android:clipChildren="false">
+
+    <com.ndcubed.nappsupport.views.SimpleColorButton
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            ndcubed:isRoundedStyle="false"
+            ndcubed:isAnimated="false"
+            ndcubed:buttonColor="@color/appMediumColor"
+            android:text="Create New Scene"
+            android:id="@+id/newSceneButton"
+            />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <GridView android:layout_width="match_parent" android:layout_height="match_parent" android:id="@+id/scenesGridView"
+            android:scrollbars="none"
+            android:padding="10dp"
+            android:divider="@null"
+            android:clipToPadding="false"
+            android:clipChildren="false"
+            android:numColumns="2"
+            android:columnWidth="150dp"
+            android:verticalSpacing="15dp"
+            android:horizontalSpacing="15dp"
+            android:stretchMode="columnWidth"
+            android:dividerHeight="0dp"/>
+    </LinearLayout>
+
+</LinearLayout>

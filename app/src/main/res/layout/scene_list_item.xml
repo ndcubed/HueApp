@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ndcubed.hueapp.FixedAspectRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_height="match_parent"
+              android:layout_width="match_parent"
+              android:orientation="vertical">
+
+
+    <com.ndcubed.nappsupport.views.RadialColorIndicator
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/radialColorIndicator"/>
+
+    <LinearLayout android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:id="@+id/rootView"
+        >
+
+        <View android:layout_width="54dp" android:layout_height="54dp"
+            android:background="@drawable/ic_launcher"
+            android:visibility="gone"/>
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:textSize="13dp"
+            android:textColor="#ff777777"
+            android:id="@+id/sceneLabel"
+            android:text="Sunset"
+            android:visibility="visible"/>
+
+    </LinearLayout>
+
+</com.ndcubed.hueapp.FixedAspectRelativeLayout>

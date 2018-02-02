@@ -1,0 +1,95 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.ndcubed.hueapp">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <activity android:name="com.ndcubed.hueapp.StartupActivity"
+            android:label="@string/app_name"
+            android:theme="@style/MainTheme"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".sensors.SensorsActivity"
+            android:label="SensorsActivity"
+            android:theme="@style/MainTheme"
+            android:configChanges="orientation|screenSize"
+            android:windowSoftInputMode="adjustPan|stateHidden"/>
+        <activity android:name="com.ndcubed.hueapp.CreateGroupActivity"
+            android:label="CreateGroup"
+            android:theme="@style/MainTheme"
+            android:configChanges="orientation|screenSize"
+            android:windowSoftInputMode="adjustPan|stateHidden">
+        </activity>
+        <activity android:name="com.ndcubed.hueapp.ColorChooseActivity"
+            android:label="ChooseColor"
+            android:theme="@style/WhiteDialogTheme"
+            android:configChanges="orientation|screenSize"
+            android:windowSoftInputMode="adjustPan|stateHidden">
+        </activity>
+        <activity android:name="com.ndcubed.hueapp.CreateSceneActivity"
+            android:label="ChooseColor"
+            android:theme="@style/WhiteDialogTheme"
+            android:configChanges="orientation|screenSize"
+            android:windowSoftInputMode="adjustPan|stateHidden">
+        </activity>
+        <activity android:name="com.ndcubed.hueapp.HueApp"
+            android:label="HueApp"
+            android:theme="@style/MainTheme"
+            android:configChanges="orientation|screenSize"
+            android:windowSoftInputMode="adjustPan|stateHidden">
+        </activity>
+        <activity android:name="com.ndcubed.hueapp.FindBridgeActivity"
+            android:label="FindBridge"
+            android:theme="@style/MainTheme"
+            android:configChanges="orientation|screenSize"
+            android:windowSoftInputMode="adjustPan|stateHidden">
+        </activity>
+        <activity android:name="com.ndcubed.hueapp.GroupActivity"
+            android:label="GroupManager"
+            android:theme="@style/MainTheme"
+            android:configChanges="orientation|screenSize"
+            android:windowSoftInputMode="adjustPan|stateHidden">
+        </activity>
+
+        <service android:name=".service.GeofenceTransitionsIntentService"/>
+        <service android:name=".service.BackgroundLightService"/>
+
+        <receiver
+            android:name=".BootReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.location.MODE_CHANGED"/>
+                <action android:name="android.location.PROVIDERS_CHANGED"/>
+                <action android:name="android.net.wifi.WIFI_STATE_CHANGED" />
+                <action android:name="android.net.wifi.STATE_CHANGE"/>
+            </intent-filter>
+        </receiver>
+
+        <receiver
+            android:name=".GeofenceReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.aol.android.geofence.ACTION_RECEIVE_GEOFENCE"/>
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

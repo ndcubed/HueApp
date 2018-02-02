@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="70dp"
+                  android:background="?attr/appForegroundColor"
+                  android:paddingLeft="10dp"
+                  android:paddingRight="10dp"
+                  android:gravity="center">
+
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:paddingLeft="34dp"
+            android:popupBackground="@drawable/card_layer"
+            android:background="@drawable/spinner_gray_background"
+            android:id="@+id/groupSpinner"/>
+    </LinearLayout>
+
+    <ListView android:layout_width="match_parent" android:layout_height="match_parent" android:id="@+id/lightsListView"
+            android:divider="@null"
+            android:dividerHeight="0dp"
+            android:paddingTop="10dp"
+            android:clipToPadding="false"/>
+
+</LinearLayout>

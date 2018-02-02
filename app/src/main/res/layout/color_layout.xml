@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:ndcubed="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:scrollbars="none"
+              android:id="@+id/scrollViewContainer">
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical"
+            android:paddingBottom="10dp">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:layout_marginTop="11dp"
+                android:gravity="center">
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="10dp"
+                    android:orientation="vertical"
+                    android:background="@drawable/plain_card">
+
+                <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="95dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="25dp"
+                        android:paddingRight="6dp"
+                        android:paddingBottom="1dp"
+                        android:text="Groups"
+                        android:textSize="11dp"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:background="@drawable/dark_blue_arrow"
+                        android:textColor="#ffffff"/>
+
+                <Spinner android:layout_width="match_parent" android:layout_height="50dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="5dp"
+                        android:id="@+id/groupSpinner"/>
+
+                <View android:layout_width="match_parent"
+                      android:layout_height="1dp"
+                      android:layout_marginLeft="10dp"
+                      android:layout_marginRight="10dp"
+                      android:background="?attr/colorDividerColor"/>
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingLeft="8dp"
+                        android:paddingRight="8dp"
+                        android:paddingTop="15dp">
+                    <com.ndcubed.nappsupport.views.SimpleColorButton
+                            android:layout_weight="0.5"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            ndcubed:buttonColor="@color/appDarkOrangeColor"
+                            android:text="Delete Group"
+                            android:layout_marginRight="8dp"
+                            android:padding="15dp"
+                            android:id="@+id/deleteGroupButton"
+                            />
+                    <com.ndcubed.nappsupport.views.SimpleColorButton
+                            android:layout_weight="0.5"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            ndcubed:buttonColor="@color/appDarkOrangeColor"
+                            android:text="+ New Group"
+                            android:padding="15dp"
+                            android:id="@+id/newGroupButton"
+                            />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:gravity="center">
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="20dp"
+                    android:orientation="vertical"
+                    android:background="@drawable/plain_card">
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="left|center">
+                    <TextView
+                            android:layout_height="wrap_content"
+                            android:layout_width="95dp"
+                            android:layout_marginBottom="25dp"
+                            android:layout_marginTop="25dp"
+                            android:paddingRight="6dp"
+                            android:paddingBottom="1dp"
+                            android:text="Color"
+                            android:textSize="11dp"
+                            android:textStyle="bold"
+                            android:gravity="center"
+                            android:background="@drawable/dark_blue_arrow"
+                            android:textColor="#ffffff"/>
+                    <com.ndcubed.nappsupport.views.ColorDot android:layout_width="30dp" android:layout_height="30dp" android:layout_marginLeft="10dp" android:id="@+id/colorDot"/>
+                </LinearLayout>
+
+                <com.ndcubed.nappsupport.views.ColorChooser
+                        android:id="@+id/colorChooser"
+                        android:layout_width="match_parent"
+                        android:layout_height="230dp"/>
+            </LinearLayout>
+
+            <com.ndcubed.nappsupport.views.SimpleColorButton
+                    android:visibility="gone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    ndcubed:buttonColor="#405269"
+                    android:text="Pink"
+                    android:layout_centerInParent="true"
+                    android:padding="30dp"
+                    android:id="@+id/pinkButton"
+                    />
+
+            <com.ndcubed.nappsupport.views.SimpleColorButton
+                    android:visibility="gone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    ndcubed:buttonColor="#405269"
+                    android:text="Regular"
+                    android:layout_centerInParent="true"
+                    android:padding="30dp"
+                    android:id="@+id/regularButton"
+                    />
+
+            <Button android:layout_width="wrap_content" android:layout_height="50dp"
+                    android:text="Search"
+                    android:id="@+id/searchButton"
+                    android:visibility="gone"/>
+        </LinearLayout>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:gravity="center">
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="22dp"
+                    android:orientation="vertical"
+                    android:background="@drawable/plain_card">
+
+                <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="95dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="25dp"
+                        android:paddingRight="6dp"
+                        android:paddingBottom="1dp"
+                        android:text="Brightness"
+                        android:textSize="11dp"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:background="@drawable/dark_blue_arrow"
+                        android:textColor="#ffffff"/>
+
+                <SeekBar
+                        android:id="@+id/brightnessBar"
+                        android:max="254"
+                        android:progress="154"
+                        android:layout_marginTop="13dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

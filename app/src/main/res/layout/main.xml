@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:clipChildren="false"
+                android:clipToPadding="false"
+                android:id="@+id/rootAppContainer"
+>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="?attr/appForegroundColor"
+            android:gravity="left|center">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="left|center">
+
+            <TextView
+                    android:focusable="false"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingTop="5dp"
+                    android:text="Groups"
+                    android:textSize="20dp"
+                    android:gravity="center"
+                    android:textColor="#ffffff"
+                    android:id="@+id/tabTitleLabel"
+                    android:visibility="visible"/>
+
+            <TextView
+                    android:focusable="false"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:text="+"
+                    android:textSize="30dp"
+                    android:visibility="gone"
+                    android:gravity="center"
+                    android:id="@+id/searchLightsButton"
+                    android:textColor="#ffffff"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="55dp"
+            android:orientation="vertical"
+            android:id="@+id/appContainer">
+        <com.ndcubed.nappsupport.views.ViewPagerTabs
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:id="@+id/viewPagerTabs"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="?attr/appForegroundColor"/>
+
+        <android.support.v4.view.ViewPager
+                android:id="@+id/pager"
+                android:clipChildren="false"
+                android:clipToPadding="false"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+    </LinearLayout>
+
+    <View android:layout_width="20dp" android:layout_height="match_parent" android:id="@+id/sideViewTrigger"/>
+    <View android:layout_marginStart="8dp" android:layout_marginTop="8dp" android:layout_width="25dp" android:layout_height="25dp" android:background="@drawable/line_drag_handle" android:id="@+id/dragHandle"/>
+
+    <com.ndcubed.hueapp.SideView android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent" android:id="@+id/sideViewContainer" android:orientation="horizontal" android:paddingRight="85dp" android:translationX="0dp" android:clipToPadding="false" android:clipChildren="false">
+        <LinearLayout android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"
+                      android:orientation="vertical"
+                      android:paddingTop="0dp"
+                      android:id="@+id/sideView">
+
+            <LinearLayout android:padding="10dp" android:background="#f0f0f0" android:gravity="center" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="64dp">
+                <View android:layout_marginLeft="6dp" android:layout_width="20dp" android:layout_height="35dp" android:background="@drawable/dark_bulb_icon"/>
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Find New Lights"
+                        android:textSize="12dp"
+                        android:textStyle="bold"
+                        android:textAllCaps="true"
+                        android:gravity="center"
+                        android:textColor="#9b9b9b"/>
+            </LinearLayout>
+
+            <LinearLayout android:layout_marginTop="5dp" android:padding="10dp" android:background="#f0f0f0" android:gravity="center" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="64dp">
+                <View android:layout_marginLeft="1dp" android:layout_width="30dp" android:layout_height="30dp" android:background="@drawable/bridge_icon2"/>
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Change Bridge"
+                        android:textSize="12dp"
+                        android:textStyle="bold"
+                        android:textAllCaps="true"
+                        android:gravity="center"
+                        android:textColor="#9b9b9b"/>
+            </LinearLayout>
+
+            <LinearLayout android:layout_marginTop="5dp" android:padding="10dp" android:background="#f0f0f0" android:gravity="center" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="64dp" android:id="@+id/eraseContentButton">
+                <View android:layout_marginLeft="6dp" android:layout_width="20dp" android:layout_height="35dp" android:background="@drawable/pink_bulb"/>
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Erase All Content"
+                        android:textSize="12dp"
+                        android:textStyle="bold"
+                        android:textAllCaps="true"
+                        android:gravity="center"
+                        android:textColor="#767676"/>
+            </LinearLayout>
+        </LinearLayout>
+
+    </com.ndcubed.hueapp.SideView>
+
+</RelativeLayout>
+
