@@ -72,7 +72,7 @@
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             ndcubed:buttonColor="@color/appDarkOrangeColor"
-                            android:text="+ New Group"
+                            android:text="New Group"
                             android:padding="15dp"
                             android:id="@+id/newGroupButton"
                             />
