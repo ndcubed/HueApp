@@ -27,7 +27,7 @@
                     android:layout_marginTop="15dp"
                     android:paddingRight="6dp"
                     android:paddingBottom="1dp"
-                    android:text="Color"
+                    android:text="Colors"
                     android:textSize="11dp"
                     android:textStyle="bold"
                     android:gravity="center"
