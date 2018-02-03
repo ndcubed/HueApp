@@ -24,7 +24,7 @@ dependencies {
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
-    compile 'com.ndcubed.napputils:napputils:1.0.0-SNAPSHOT'
+    compile 'com.ndcubed.napputils:napputils:1.0.1-SNAPSHOT'
     compile 'com.ndcubed.utils:utils:1.0.1-SNAPSHOT'
     compile 'com.android.support:appcompat-v7:25.1.0'
     compile 'com.android.support:support-v13:25.1.0'
