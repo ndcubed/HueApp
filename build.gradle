@@ -14,10 +14,14 @@ buildscript {
 
 allprojects {
     repositories {
-        jcenter()
-        flatDir {
-            dirs 'libs'
+        mavenCentral()
+
+        maven {
+            url 'http://prairiemermaids.net/maven2'
         }
+
+        jcenter()
+
     }
 }
 
