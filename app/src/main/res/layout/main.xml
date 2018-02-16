@@ -72,7 +72,7 @@
     <View android:layout_width="20dp" android:layout_height="match_parent" android:id="@+id/sideViewTrigger"/>
     <View android:layout_marginStart="8dp" android:layout_marginTop="8dp" android:layout_width="25dp" android:layout_height="25dp" android:background="@drawable/line_drag_handle" android:id="@+id/dragHandle"/>
 
-    <com.ndcubed.hueapp.SideView android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent" android:id="@+id/sideViewContainer" android:orientation="horizontal" android:paddingRight="85dp" android:translationX="0dp" android:clipToPadding="false" android:clipChildren="false">
+    <com.ndcubed.hueapp.SideView android:visibility="visible" android:layout_width="match_parent" android:layout_height="match_parent" android:id="@+id/sideViewContainer" android:orientation="horizontal" android:paddingRight="85dp" android:translationX="0dp" android:clipToPadding="false" android:clipChildren="false">
         <LinearLayout android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"
                       android:orientation="vertical"
                       android:paddingTop="0dp"

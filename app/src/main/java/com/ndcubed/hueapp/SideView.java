@@ -13,6 +13,7 @@ import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
+import android.view.ViewTreeObserver;
 import android.view.Window;
 import android.view.animation.AccelerateDecelerateInterpolator;
 import android.view.animation.DecelerateInterpolator;
@@ -26,7 +27,6 @@ public class SideView extends LinearLayout {
     private float pressX, newX, oldX, dX;
     private boolean isDragging = false;
     private View triggerView, animatedChildContainer;
-    private float percent = 0f;
     private Paint paint = new Paint();
 
     public SideView(Context context) {
@@ -46,6 +46,15 @@ public class SideView extends LinearLayout {
 
     private void init() {
         setWillNotDraw(false);
+
+        getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
+            @Override
+            public void onGlobalLayout() {
+                setTranslationX(-getWidth());
+                setVisibility(View.GONE);
+                getViewTreeObserver().removeOnGlobalLayoutListener(this);
+            }
+        });
 
         setOnTouchListener(new OnTouchListener() {
             @Override
@@ -92,7 +101,7 @@ public class SideView extends LinearLayout {
 
     private float getPercent() {
 
-        return ((getPaddedWidth() - Math.abs(getTranslationX())) / getPaddedWidth());
+        return Math.max(0f, ((getPaddedWidth() - Math.abs(getTranslationX())) / getPaddedWidth()));
     }
 
     private int getPaddedWidth() {
@@ -302,8 +311,8 @@ public class SideView extends LinearLayout {
     @Override
     protected void onDraw(Canvas canvas) {
 
-        paint.setColor(Color.BLACK);
-        paint.setAlpha((int)(100f * getPercent()));
+        paint.setColor(Color.rgb(0, 151, 174));
+        paint.setAlpha((int)(200f * getPercent()));
 
         canvas.translate(-(getTranslationX()), 0);
         canvas.drawRect(0, 0, getWidth(), getHeight(), paint);

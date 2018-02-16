@@ -134,16 +134,6 @@ public class HueApp extends Activity {
         sideViewContainer = (SideView)findViewById(R.id.sideViewContainer);
         sideView = findViewById(R.id.sideView);
         sideViewContainer.setTriggerView(findViewById(R.id.sideViewTrigger));
-        sideViewContainer.getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
-            @Override
-            public void onGlobalLayout() {
-
-                sideViewWidth = findViewById(R.id.sideView).getWidth();
-                findViewById(R.id.sideViewContainer).getViewTreeObserver().removeOnGlobalLayoutListener(this);
-                System.out.println("SIDE VIEW: " + sideViewWidth);
-                sideViewContainer.setVisibility(View.GONE);
-            }
-        });
         sideViewContainer.setAnimatedChildContainer(sideView);
 
         findViewById(R.id.eraseContentButton).setOnClickListener(new View.OnClickListener() {
