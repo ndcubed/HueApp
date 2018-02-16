@@ -44,7 +44,7 @@ public class SideView extends LinearLayout {
         init();
     }
 
-    //test
+    //testt
     private void init() {
         setWillNotDraw(false);
 
